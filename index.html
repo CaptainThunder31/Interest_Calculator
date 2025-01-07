@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>Interest Calculator | Captain Thunder</title>
+  <style type="text/css" media="all">
+    /* Existing CSS goes here */
+  </style>
+  <<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-mode">
+  <div class="card">
+    <h1>Interest Calculator</h1>
+    <div class="form-outer">
+      <form>
+        <div class="form-div">
+          <input type="number" id="amount" autocomplete="off" required />
+          <label for="amount" class="label">
+            <span class="label-content">Principle amount:</span>
+          </label>
+        </div>
+        <div id="groups">
+          <div class="form-div">
+            <input type="number" id="rate" autocomplete="off" required />
+            <label for="rate" class="label">
+              <span class="label-content">Interest rate:</span>
+            </label>
+          </div>
+          <div class="form-div form-select">
+            <select id="type" required>
+              <option value="" disabled selected hidden></option>
+              <option value="0">Simple</option>
+              <option value="1">Complex</option>
+            </select>
+            <label for="type" class="label">
+              <span class="label-content">Interest type:</span>
+            </label>
+          </div>
+        </div>
+        <div id="groups">
+          <div class="form-div">
+            <input type="date" id="startDate" autocomplete="off" required />
+            <label for="startDate" class="label">
+              <span class="label-content">Starting date:</span>
+            </label>
+          </div>
+          <div class="form-div">
+            <input type="date" id="endDate" autocomplete="on" required />
+            <label for="endDate" class="label">
+              <span class="label-content">Ending date:</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-div form-select">
+          <select id="period" required>
+            <option value="" disabled selected hidden></option>
+            <option value="1">Yearly</option>
+            <option value="1/2">Half yearly</option>
+            <option value="1/4">Quarterly</option>
+            <option value="1/12">Monthly</option>
+          </select>
+          <label for="period" class="label">
+            <span class="label-content">Interest period:</span>
+          </label>
+        </div>
+        <div id="output">
+          Total Amount:
+        </div>
+      </form>
+    </div>
+    <div class="buttons">
+      <button class="submit" id="btn">Calculate</button>
+      <button class="dark-mode-toggle" id="darkModeBtn"><img src="moon.svg" alt="sun" id="icon"></button>
+    </div>
+  </div>
+
+  <script src="main.js">
+
+  </script>
+</body>
+
+</html>

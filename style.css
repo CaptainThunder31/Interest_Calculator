@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4vw;
+  transition: background-color 0.2s, color 0.5s;
+}
+
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.form-div {
+  width: 90%;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.form-div input,
+.form-div select {
+  width: 100%;
+  height: 100%;
+  color: #000;
+  background: #fff;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.form-div label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #111;
+  font-weight: light;
+  color: #000;
+  transition: color 0.2s;
+}
+
+.form-div label:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: -1px;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease, border-bottom 0.2s ease;
+  border-bottom: 3px solid #71A4FF;
+}
+
+.label-content {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: transform 0.2s ease, font-size 0.2s ease, color 0.2s;
+}
+
+.form-div input:focus+.label .label-content,
+.form-div input:valid+.label .label-content,
+.form-div select:focus+.label .label-content,
+.form-div select:valid+.label .label-content {
+  transform: translateY(-100%);
+  font-size: 14px;
+  color: #71A4FF;
+}
+
+.form-div input:focus+.label:after,
+.form-div select:focus+.label:after {
+  transform: translateX(0%);
+}
+
+body.dark-mode .form-div input,
+body.dark-mode .form-div select {
+  color: #fff;
+}
+
+body.dark-mode .form-div label {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+body.dark-mode .form-div label:after {
+  border-bottom: 3px solid #23D200;
+}
+
+body.dark-mode .form-div input:focus+.label .label-content,
+body.dark-mode .form-div input:valid+.label .label-content,
+body.dark-mode .form-div select:focus+.label .label-content,
+body.dark-mode .form-div select:valid+.label .label-content {
+  color: #23D200;
+}
+
+.card {
+  width: 90%;
+  height: 70%;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 10%;
+  box-shadow: 0 10px 30px #bbc;
+}
+
+.card h1 {
+  color: #000;
+}
+
+body.dark-mode .card {
+  background: #121212;
+  box-shadow: 0 10px 30px #666;
+}
+
+body.dark-mode .card h1 {
+  color: #fff;
+}
+
+form,
+.form-outer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 40%;
+}
+
+#btn,
+.dark-mode-toggle {
+  color: #000;
+  background: #fff;
+  padding: 10px 12px;
+  font-size: 1.2em;
+  border-radius: 2vw;
+  border: 1px solid #000;
+  outline: none;
+  font-weight: light;
+  width: 70%;
+  height: 40%;
+  transition: color 1s;
+}
+
+.dark-mode-toggle {
+  width: 15%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark-mode #btn,
+body.dark-mode .dark-mode-toggle {
+  background: #121212;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+body.dark-mode .form-div input,
+body.dark-mode .form-div select {
+  background: #121212;
+}
+
+#groups {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#groups div {
+  width: 47%;
+}
+
+#output {
+  width: 90%;
+  border: 1px solid #000;
+  height: 15%;
+  padding-top: 4%;
+  padding-left: 10px;
+  border-radius: 10px;
+  transition: color 0.1s;
+}
+
+body.dark-mode #output {
+  border: 1px solid #fff;
+}
+
+#period:disabled {
+  color: #666;
+  opacity: 0.5;
+}
+
+#icon {
+  width: 120%;
+  height: 120%;
+}
+
+@media only screen and (min-width: 400px) {
+  #icon {
+    width: 50%;
+    height: 50%;
+  }
+}
