@@ -161,7 +161,6 @@ form,
 .dark-mode-toggle {
   color: #000;
   background: #fff;
-  padding: 10px 12px;
   font-size: 1.2em;
   border-radius: 2vw;
   border: 1px solid #000;
@@ -226,13 +225,6 @@ body.dark-mode #output {
 }
 
 #icon {
-  width: 120%;
-  height: 120%;
-}
-
-@media only screen and (min-width: 450px) {
-  #icon {
-    width: 50%;
-    height: 50%;
-  }
+  width: 50%;
+  height: 50%;
 }
