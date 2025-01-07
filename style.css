@@ -168,13 +168,13 @@ form,
   outline: none;
   font-weight: light;
   width: 70%;
-  height: 40%;
+  height: 50%;
   transition: color 1s;
 }
 
 .dark-mode-toggle {
-  width: 15%;
-  height: 40%;
+  width: 13vw;
+  height: 13vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -227,7 +227,7 @@ body.dark-mode #output {
   height: 120%;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 450px) {
   #icon {
     width: 50%;
     height: 50%;
