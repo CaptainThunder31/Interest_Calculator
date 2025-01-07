@@ -170,6 +170,9 @@ form,
   width: 70%;
   height: 50%;
   transition: color 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dark-mode-toggle {
