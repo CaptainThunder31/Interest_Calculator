@@ -219,8 +219,9 @@ body.dark-mode #output {
   border: 1px solid #fff;
 }
 
-#period:disabled {
+#period:disabled + label[for=period] {
   color: #666;
+  border-bottom:1px solid #666;
   opacity: 0.5;
 }
 
